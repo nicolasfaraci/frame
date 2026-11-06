@@ -1,0 +1,5 @@
+# Request an independent review
+
+1. Identify the ticket or change, its base and target revisions, and the acceptance criteria. Use any target supplied after the command. If the target remains ambiguous, ask the user to identify it.
+2. Treat this command as an explicit request for an independent review assignment. The PO uses a temporary Reviewer who did not implement or fix the change when the host provides an authorized native tool. Follow the [assignment protocol](../references/missions.md) and the [Independent Reviewer rules](../references/roles.md). If independent execution is unavailable, prepare a brief for a separate session and report the review as pending.
+3. Return the verdict tied to the reviewed revision and the findings with severity, location, evidence, and remaining checks. The PO reprioritizes follow-ups and brings any required decision to the user. Apply backlog changes only within the user's authorized write scope and through the authorized writer. The command authorizes the review assignment. Fixes, additional assignments, integration, and ticket closure follow the standard rules.

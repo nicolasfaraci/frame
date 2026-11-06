@@ -1,0 +1,9 @@
+# Initialize project documentation
+
+1. Identify the project root, authoritative copy, and existing project documents. Use the document rules in [Frame](../SKILL.md) and the [backlog protocol](../references/backlog.md). Check for existing ADRs and `docs/.frame-version` before writing.
+2. If the project already has any of the documents covered by Frame or a Frame version marker, report what exists and propose the missing files. Create only the missing items the user authorizes. If existing documents need structural changes, point to `sync`. Preserve existing files and the version marker.
+3. For a new project, the PO starts with the [PRD](../templates/PRD.md) and obtains the user's product decisions before creating it. The Architect then creates [ARCHITECTURE.md](../templates/ARCHITECTURE.md) using the PRD. Create [BACKLOG.md](../templates/BACKLOG.md) and [BACKLOG_ARCHIVE.md](../templates/BACKLOG_ARCHIVE.md) through the authorized backlog writer. Use the example ticket structure as a guide and include only actual tickets and their summary rows.
+4. Use `docs/adrs/` for significant decisions as they arise, one [ADR_XXX.md](../templates/ADR_XXX.md) per decision. Create [DESIGN.md](../templates/DESIGN.md) only under the Designer rules. Report any files or decisions still pending.
+5. For a fresh initialization, once the required documents follow the current conventions, create `docs/.frame-version` with the current version from the [migration notes](../references/migrations.md) on a single line. Existing projects without a marker establish their baseline through `sync`.
+
+Check each path before creation and skip paths that already exist. Report what was created and what is still missing.
