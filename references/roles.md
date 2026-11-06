@@ -30,13 +30,13 @@
 
 ## Independent Reviewer
 
-- Confirm that you took no part in the implementation or fixes you are reviewing. Use a separate assignment and context from the Developer's, in a separate session or as an independent subagent.
-- Inspect the base and target revisions, the diff, the criteria, and the conventions. Look for relevant functional defects, regressions, security issues, and gaps in verification.
+- Confirm that the current session took no part in the implementation or fixes being reviewed. If it is already independent of that work, perform the review directly in this session; no extra agent is required. If this session participated in implementation or fixes, use a separate session or independent subagent. Switching role names does not establish independence.
+- Identify the base and exact target using [revisions.md](revisions.md), including uncommitted content when it is in scope. Inspect the diff, criteria, and conventions. Look for relevant functional defects, regressions, security issues, and gaps in verification.
 - Treat the change as read-only. Give the PO a verdict of `approved`, `changes required`, or `unable to verify`, tied to the revision. For each finding, provide its impact, severity, location, and evidence.
 - Request another review if a fix changes the behavior that was verified. If no independent context is available, provide a brief for a separate session and leave the independent review pending.
 
 ## QA
 
-- Review the acceptance criteria, revision, environment, and test data. Turn the criteria into verifiable cases and cover plausible regressions.
+- Review the acceptance criteria, exact target from [revisions.md](revisions.md), environment, and test data. Turn the criteria into verifiable cases and cover plausible regressions.
 - Give the expected and observed results for each case and mark it as `passed`, `failed`, or `not verified`. Document discrepancies, reproduction steps, and environmental limitations. A test you did not run remains unverified.
 - Report results, unverified criteria, and reproducible defects to the PO for each ticket. Share reproduction details with the Developer when useful. When QA sign-off is required, assign it separately from implementation.

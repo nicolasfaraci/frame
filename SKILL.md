@@ -5,7 +5,7 @@ description: "Use when the user wants to work with a temporary software team, di
 
 # Frame
 
-Choose the requested role and mode. Each assignment uses a temporary role with a defined objective. The conversation can move from PO to QA or cover several independent tickets. Use the project's files under `docs/` to pick up where work left off.
+Choose the requested role and mode. Each assignment uses a temporary role with a defined objective. The conversation can move from PO to QA or cover several independent tickets. Use the project's authoritative documents to pick up where work left off.
 
 ## Route an optional command
 
@@ -39,7 +39,7 @@ Delegated mode requires an explicit request to delegate the assignment and an av
 
 ## Recover project context
 
-Identify the project root and, before making any changes, the authoritative copy of the project. Read the PRD and the relevant sections of the backlog, architecture, ADRs, and any existing design documentation as needed for the assignment. Use the code and its tests to verify actual behavior. If sources disagree, raise the discrepancy with the relevant role before making a decision that depends on it.
+Identify the project root and, before making any changes, the authoritative copy of the project. Resolve document paths using [documents.md](references/documents.md); paths in this skill and its resources are defaults for new projects, not a requirement to relocate existing documents. Read the PRD and the relevant sections of the backlog, architecture, ADRs, and any existing design documentation as needed for the assignment. Use the code and its tests to verify actual behavior. If sources disagree, raise the discrepancy with the relevant role before making a decision that depends on it.
 
 | Project file | Rule |
 | --- | --- |
@@ -47,7 +47,7 @@ Identify the project root and, before making any changes, the authoritative copy
 | `docs/ARCHITECTURE.md` | The Architect creates it after the PRD. Architecture changes are based on an accepted ADR. |
 | `docs/adrs/ADR_XXX.md` | One significant decision per file. The architecture document cites applicable ADRs. |
 | `docs/BACKLOG.md` | Summary table followed by active phases, epics, and tickets. All backlog edits follow [backlog.md](references/backlog.md). |
-| `docs/BACKLOG_ARCHIVE.md` | Full history of completed tickets. Read only the entries needed for the assignment. |
+| `docs/BACKLOG_ARCHIVE.md` | Full history of completed and cancelled tickets; their statuses remain distinct. Read only the entries needed for the assignment. |
 | `docs/DESIGN.md` | Optional. Create or revise it when the user explicitly engages the Designer and asks to update the design guidelines. |
 
 For an existing project, keep its current documents and identifiers. Flag gaps that prevent the assignment from proceeding and reuse reliable information. A diff review or a one-off check can start with the context available. The order for creating the PRD and architecture document applies only to initialization.
@@ -56,6 +56,6 @@ Use the [PRD](templates/PRD.md), [architecture](templates/ARCHITECTURE.md), [ADR
 
 ## Protect parallel work
 
-The PO can refine future tickets while Developers work on reserved tickets. Keep write scopes and the revisions under review separate. Every delegated agent treats `docs/` as read-only and submits proposed documentation changes. Only one authorized session writes to the authoritative copy of the backlog. If the writer's identity or the freshness of the copy is unclear, return a proposal for each ticket.
+The PO can refine future tickets while Developers work on reserved tickets. Keep write scopes and the revisions under review separate. Every delegated agent treats the resolved Frame governance documents as read-only and submits proposed changes to them. Other documentation, including technical guides under `docs/`, may be edited within the explicit assignment scope. See the protected document list in [documents.md](references/documents.md). Only one authorized session writes to the authoritative copy of the backlog. If the writer's identity or the freshness of the copy is unclear, return a proposal for each ticket.
 
 At the end of an assignment, report the work done, the evidence, the limitations, and any proposed updates. Distinguish agents actually launched, briefs ready to hand off, and results actually received. Parallel execution and the ability to continue the conversation during an assignment depend on the host. End assignments and release agents through the available mechanism.

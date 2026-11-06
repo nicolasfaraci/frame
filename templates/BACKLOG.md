@@ -5,7 +5,7 @@
 | ID | Ticket | Phase / Epic | Status | Priority | Blocker / Next action |
 | --- | --- | --- | --- | --- | --- |
 
-See [BACKLOG_ARCHIVE.md](BACKLOG_ARCHIVE.md) for completed tickets and [PRD.md](PRD.md) for product requirements. Replace the example identifiers when creating entries. Keep the table synchronized with the active tickets below.
+See [BACKLOG_ARCHIVE.md](BACKLOG_ARCHIVE.md) for completed and cancelled tickets and [PRD.md](PRD.md) for product requirements. Replace the example identifiers when creating entries. Adapt these links to the resolved project paths. Keep the table synchronized with the active tickets below.
 
 ## Phase — Name
 
@@ -18,8 +18,9 @@ See [BACKLOG_ARCHIVE.md](BACKLOG_ARCHIVE.md) for completed tickets and [PRD.md](
 - Relevant PRD requirements / ADRs / design
 - Dependencies — Required IDs or none
 - Scope and exclusions
-- Reservation — None, or assignment, owner, write scope, base revision, and date
+- Reservation — None, or assignment, owner, write scope, base commit or snapshot reference, and date
 - Blocker and condition for resuming — If applicable
+- Cancellation — If applicable: decision maker, date, reason, worker shutdown confirmation, and disposition of partial work
 
 ##### Acceptance criteria
 
@@ -27,12 +28,12 @@ See [BACKLOG_ARCHIVE.md](BACKLOG_ARCHIVE.md) for completed tickets and [PRD.md](
 
 ##### Verification and delivery
 
-| Check | Revision or reference | Result and evidence |
+| Check | Exact target commit or snapshot reference | Result and evidence |
 | --- | --- | --- |
 | Implementation and Developer checks | | |
 | Independent review for code | | |
 | QA if required | | |
-| Integration or delivery | | |
+| Integration or delivery, including equivalence to validated content | | |
 
 ##### History
 

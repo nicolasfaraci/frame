@@ -32,6 +32,12 @@ Delegated agents receive one-off assignments through the available native tools.
 
 ## Project workflow
 
-The PO coordinates temporary agents, reprioritizes Developer, Reviewer, and QA findings, and brings decisions requiring human input to the user. The authorized backlog writer keeps the summary at the top of `docs/BACKLOG.md` current and moves completed tickets with their history into `docs/BACKLOG_ARCHIVE.md`.
+The PO coordinates temporary agents, reprioritizes Developer, Reviewer, and QA findings, and brings decisions requiring human input to the user. The authorized backlog writer keeps the summary at the top of `docs/BACKLOG.md` current and moves completed and cancelled tickets with their distinct statuses and history into `docs/BACKLOG_ARCHIVE.md`.
 
 For an existing project, use `sync` to compare its documentation with the current Frame conventions, even if it has no version marker. Approved migrations are logged in `docs/FRAME-MIGRATIONS.md` and record the resulting documentation version in `docs/.frame-version`. [Migration notes](references/migrations.md)
+
+Existing document paths are preserved. Only Frame governance documents are read-only for delegated agents; assigned technical guides can be edited. Independent review can run directly in a session that did not implement the change. Local changes are identified by reproducible snapshots when no commit captures the target.
+
+## Validation
+
+Use the [behavioral scenarios](tests/scenarios.md) to check role decisions, exact review targets, custom paths, cancellation, and recovery. Run evaluations in disposable projects and score resulting actions and artifacts rather than matching wording.

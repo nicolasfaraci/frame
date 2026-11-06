@@ -2,9 +2,9 @@
 
 ## Inspect and propose
 
-1. Identify the project root and authoritative copy. Read the current version and documented changes in the [migration notes](../references/migrations.md). Read the baseline from `docs/.frame-version`. If the marker is absent or unrecognized, treat the baseline as unknown and assess the documents as they are. If the recorded Frame version is newer than the skill, report it and leave the project untouched.
+1. Identify the project root and authoritative copy, then resolve document paths using [documents.md](../references/documents.md). Preserve those paths and adapt links instead of creating default-path duplicates. Read the current version and documented changes in the [migration notes](../references/migrations.md). Read the baseline from `docs/.frame-version`. If the marker is absent or unrecognized, treat the baseline as unknown and assess the documents as they are. If the recorded Frame version is newer than the skill, report it and leave the project untouched.
 2. Inspect the actual PRD, architecture, ADRs, optional design, backlog, and any archive. Compare their structure with the documented changes. Identify missing sections, outdated structures, and new requirements. Use version numbers to select candidate changes and concrete evidence in the files to decide what applies. Check the structure even when the version already matches.
-3. Give the user a file-by-file plan. State the recorded baseline, target version, observed differences, exact edits or moves, preserved content, unresolved decisions, and planned log and marker changes. Identify completed ticket IDs to move. Flag ambiguities such as conflicting ticket copies or statuses. Stop for explicit approval of the plan. If the documents and marker already conform, report that outcome without edits.
+3. Give the user a file-by-file plan. State the recorded baseline, target version, observed differences, exact edits or moves, preserved content, unresolved decisions, and planned log and marker changes. Identify completed and explicitly cancelled ticket IDs to move, preserving their distinct statuses. Flag ambiguities such as conflicting ticket copies or statuses. Stop for explicit approval of the plan. If the documents and marker already conform, report that outcome without edits.
 
 ## Apply the approved plan
 
