@@ -1,6 +1,15 @@
 # Documentation versions
 
-The current version is `1.0.0`. Store this version as a plain line in `docs/.frame-version`. Increment it when the project documentation conventions change and record each change here with the evidence that makes it applicable.
+The current version is `1.1.0`. Store this version as a plain line in `docs/.frame-version`. Increment it when the project documentation conventions change and record each change here with the evidence that makes it applicable.
+
+## 1.1.0 — Stack, code conventions, and refactor
+
+| Observed structure | Change |
+| --- | --- |
+| Architecture document without a technology stack section | Add the section from the [template](../templates/ARCHITECTURE.md). Fill it only from evidence in the documents, ADRs, or manifests; mark unknown choices `To be defined`. |
+| Architecture document without code organization and conventions | Add the section from the template with unresolved rules marked `To be defined`. Never invent a convention. Propose that the Architect infer them from the code and that the user validates them, or run `refactor`. |
+
+The new `refactor` command needs no migration. Projects whose stack and conventions are still `To be defined` get them established by the Architect at the start of `refactor`.
 
 ## 1.0.0 — Frame
 

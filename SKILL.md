@@ -9,7 +9,7 @@ Choose the requested role and mode. Each assignment uses a temporary role with a
 
 ## Route an optional command
 
-On explicit invocation, check for a standalone command word immediately after `$frame` or `/frame`. If the host supplies the invocation text separately, check the first word of that text. Match one of the four exact words below, then pass the remaining text as context and read only the matching command file. Follow that command's workflow and load shared references only as needed.
+On explicit invocation, check for a standalone command word immediately after `$frame` or `/frame`. If the host supplies the invocation text separately, check the first word of that text. Match one of the five exact words below, then pass the remaining text as context and read only the matching command file. Follow that command's workflow and load shared references only as needed.
 
 | Command | Workflow |
 | --- | --- |
@@ -17,15 +17,16 @@ On explicit invocation, check for a standalone command word immediately after `$
 | `sync` | [Plan and apply a documentation migration](commands/sync.md) |
 | `status` | [Report project status in read-only mode](commands/status.md) |
 | `review` | [Request an independent review](commands/review.md) |
+| `refactor` | [Audit a project against its architecture and plan the refactoring](commands/refactor.md) |
 
-For a bare invocation, a natural-language request without a command, or automatic selection, continue with the standard workflow below. A command word elsewhere in a request does not select a workflow. If the user clearly tries an unsupported command, show the four available commands before taking action.
+For a bare invocation, a natural-language request without a command, or automatic selection, continue with the standard workflow below. A command word elsewhere in a request does not select a workflow. If the user clearly tries an unsupported command, show the five available commands before taking action.
 
 ## Choose the role and mode
 
 | Request | Role |
 | --- | --- |
 | Define the product scope, write the PRD, refine or prioritize tickets | Product Owner (PO) |
-| Define the architecture or evaluate a significant technical decision | Architect |
+| Define the architecture, the technology stack and code conventions, or evaluate a significant technical decision | Architect |
 | Explicitly engage a Designer | Designer |
 | Implement one or more identified tickets | Developer |
 | Review a change independently of its author | Reviewer |
@@ -44,7 +45,7 @@ Identify the project root and, before making any changes, the authoritative copy
 | Project file | Rule |
 | --- | --- |
 | `docs/PRD.md` | Stable product foundation. For a new project, the PO defines it with the user and creates it first. Substantive revisions require an explicit decision from the user. |
-| `docs/ARCHITECTURE.md` | The Architect creates it after the PRD. Architecture changes are based on an accepted ADR. |
+| `docs/ARCHITECTURE.md` | The Architect creates it after the PRD. It defines the components, the technology stack, and the code organization and conventions. Architecture changes are based on an accepted ADR. |
 | `docs/adrs/ADR_XXX.md` | One significant decision per file. The architecture document cites applicable ADRs. |
 | `docs/BACKLOG.md` | Summary table followed by active phases, epics, and tickets. All backlog edits follow [backlog.md](references/backlog.md). |
 | `docs/BACKLOG_ARCHIVE.md` | Full history of completed and cancelled tickets; their statuses remain distinct. Read only the entries needed for the assignment. |

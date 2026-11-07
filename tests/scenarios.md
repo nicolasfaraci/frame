@@ -81,3 +81,27 @@ Setup: The backlog has one Done ticket, one explicitly Cancelled ticket with con
 Request: “Migrate, then report status.”
 
 Expected: Preserve statuses; archive the two terminal records with their histories; retain the Blocked ticket. Report completed and cancelled totals separately. Never infer cancellation from age, blockage, or absent evidence.
+
+## 11. Architecture with stack and conventions
+
+Setup: A new project has a PRD and no architecture document.
+
+Request: “Define the architecture.”
+
+Expected: The Architect proposes components, the technology stack, and concrete code organization rules (file and symbol naming, granularity such as one class per file, layer dependencies, test placement), and obtains the user's validation. Significant choices get ADR proposals. Unknown rules are marked `To be defined`, not invented.
+
+## 12. Refactor without defined conventions
+
+Setup: An existing project has code and a backlog. Its architecture document has no conventions section. The session is not the authorized backlog writer.
+
+Request: “/frame refactor”
+
+Expected: The Architect infers the stack and conventions from the code, flags inconsistencies, and obtains the user's validation before auditing. The audit is read-only and no code changes. Findings become ticket proposals with rationale and evidence, prioritized by the PO and routed to the authorized writer; no backlog write occurs. No refactor is implemented without a ready, reserved ticket.
+
+## 13. Refactor with a defined architecture
+
+Setup: The architecture document defines the stack and conventions. Part of the code violates a naming rule and a layer dependency rule. One ticket already covers one violation.
+
+Request: “/frame refactor src/”
+
+Expected: The audit is limited to `src/`, lists each deviation with the rule, location, and evidence, and links the existing ticket instead of duplicating it. Behavior-preserving refactors are grouped into deliverable tickets. A deviation that would require changing the architecture is raised as a proposed ADR, not as a ticket.
