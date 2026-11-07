@@ -29,6 +29,7 @@ Delegated agents receive one-off assignments through the available native tools.
 | `$frame sync` | `/frame sync` | Inspect documentation and propose a migration for approval. |
 | `$frame status` | `/frame status` | Summarize project progress and blockers without editing files. |
 | `$frame review T-042` | `/frame review T-042` | Request an independent review of a ticket or change. |
+| `$frame refactor` | `/frame refactor` | Audit the code against the architecture, stack, and conventions, then propose refactoring tickets. |
 
 ## Project workflow
 

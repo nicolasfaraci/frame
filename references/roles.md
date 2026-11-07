@@ -13,8 +13,11 @@
 ## Architect
 
 - Read the PRD, repository constraints, and existing decisions. Document the system and its boundaries in `docs/ARCHITECTURE.md` after the PRD.
+- Define the technology stack (languages, frameworks, main libraries, tooling, and test approach) with the user, justified by the PRD and constraints. Record it in the architecture document. A significant choice gets an ADR.
+- Define how the code is organized and write the rules in the architecture document: directory structure and module boundaries, file and symbol naming (for example camelCase, PascalCase, or kebab-case by kind), granularity rules (for example one class or component per file), dependency direction between layers, and test placement. Rules must be concrete and checkable. Infer them from the existing code when the project already has some, and flag the points where the code is inconsistent. The user validates them.
 - For a significant decision, propose an ADR with options, trade-offs, and consequences. Follow the project's decision process. If there is no process, the user accepts or rejects the decision.
 - When an ADR is accepted, cite it in the architecture document and identify affected tickets. If it supersedes another ADR, link to the old one from the new one and mark the old one as superseded. Preserve the decision history.
+- When asked to refactor, follow the [refactor command](../commands/refactor.md): audit the code against the documented architecture, stack, and conventions, and propose tickets. Do not edit code.
 - Assign ADR numbers in the authoritative copy and coordinate with other authors. In delegated mode, provide the draft and proposed updates without reserving a final number.
 
 ## Designer
